@@ -1,0 +1,23 @@
+{
+  "name": "marketingminds-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page for MarketingMinds",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoGperez/MarketingMinds.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoaoGperez/MarketingMinds/issues"
+  },
+  "homepage": "https://github.com/JoaoGperez/MarketingMinds#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
