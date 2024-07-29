@@ -41,7 +41,7 @@ section {
 }
 
 .benefits h2 {
-    margin: 40 0 40px 0;
+    margin: 40px 0 40px 0;
     font-size: 2.5em;
     color: #003366;
 }
@@ -49,24 +49,18 @@ section {
 .benefit-boxes {
     display: flex;
     justify-content: space-between;
-    /* Distribui o espaço entre as caixas */
     gap: 0;
-    /* Remove o espaço entre as caixas */
     flex-wrap: wrap;
-    /* Permite que as caixas se movam para a linha seguinte em telas menores */
 }
 
 .benefit-box {
     width: 25%;
-    /* Ajusta a largura das caixas para serem menores */
     padding: 0;
     border-radius: 15px;
     background-color: #e0e0e0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0;
-    /* Remove a margem entre as caixas */
     overflow: hidden;
-    /* Garante que o conteúdo não ultrapasse os limites da caixa */
     box-sizing: border-box;
 }
 
@@ -122,7 +116,7 @@ section {
 
 .contact-form h2 {
     color: #fff;
-    margin: 0 0 40px 0;
+    margin: 0 0 60px 0;
     font-size: 2.5em;
 }
 
@@ -162,26 +156,37 @@ section {
 
 /* Estilo do Modal */
 .modal {
-    display: none; /* Escondido por padrão */
-    position: fixed; /* Fixa o modal na tela */
-    z-index: 1; /* Garante que o modal apareça sobre outros elementos */
+    display: none;
+    /* Escondido por padrão */
+    position: fixed;
+    /* Fixa o modal na tela */
+    z-index: 1;
+    /* Garante que o modal apareça sobre outros elementos */
     left: 0;
     top: 0;
-    width: 100%; /* Largura total da tela */
-    height: 100%; /* Altura total da tela */
-    overflow: auto; /* Habilita scroll se necessário */
-    background-color: rgb(0,0,0); /* Fundo preto com opacidade */
-    background-color: rgba(0,0,0,0.4); /* Fundo preto com opacidade */
+    width: 100%;
+    /* Largura total da tela */
+    height: 100%;
+    /* Altura total da tela */
+    overflow: auto;
+    /* Habilita scroll se necessário */
+    background-color: rgb(0, 0, 0);
+    /* Fundo preto com opacidade */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fundo preto com opacidade */
 }
 
 .modal-content {
     background-color: #003366;
     color: #fff;
     font-size: 1.2em;
-    margin: 15% auto; /* 15% do topo e centralizado horizontalmente */
+    margin: 15% auto;
+    /* 15% do topo e centralizado horizontalmente */
     padding: 20px;
-    width: 60%; /* Largura do modal */
-    height: 20%; /* Altura do modal aumentada */
+    width: 40%;
+    /* Largura do modal */
+    height: 20%;
+    /* Altura do modal aumentada */
     box-sizing: border-box;
     border-radius: 10px;
     display: flex;
@@ -395,6 +400,14 @@ section {
 
     .social-proof-text p {
         font-size: 1.5em;
+    }
+
+    .modal-content {
+        height: 15%;
+        width: 60%;
+        font-size: 1.5em;
+        padding: 1px;
+        justify-content: center;
     }
 
 }
