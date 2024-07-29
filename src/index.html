@@ -45,14 +45,22 @@
     </section>
 
     <!-- Formulário -->
-    <section class="contact-form">
+    <section class="contact-form" >
         <h2>Solicite sua Consultoria Gratuita</h2>
-        <form>
-            <input type="text" name="name" placeholder="Nome" required>
-            <input type="email" name="email" placeholder="Email" required>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Nome" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
             <button type="submit">Solicitar</button>
         </form>
     </section>
+
+    <!-- Modal -->
+<div id="success-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Dados salvos com sucesso!</h2>
+    </div>
+</div>
 
     <!-- Provas Sociais -->
     <section class="social-proof">
@@ -61,19 +69,22 @@
             <div class="social-proof-box">
                 <img src="/imgs/user.png" alt="Prova Social 1" class="social-proof-image">
                 <div class="social-proof-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat quod, possimus sed commodi soluta incidunt minus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat quod, possimus sed commodi
+                        soluta incidunt minus.</p>
                 </div>
             </div>
             <div class="social-proof-box">
                 <img src="/imgs/user.png" alt="Prova Social 2" class="social-proof-image">
                 <div class="social-proof-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat quod, possimus sed commodi soluta incidunt minus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat quod, possimus sed commodi
+                        soluta incidunt minus.</p>
                 </div>
             </div>
             <div class="social-proof-box">
                 <img src="/imgs/user.png" alt="Prova Social 3" class="social-proof-image">
                 <div class="social-proof-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat quod, possimus sed commodi soluta incidunt minus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat quod, possimus sed commodi
+                        soluta incidunt minus.</p>
                 </div>
             </div>
         </div>
@@ -95,7 +106,10 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+
+
+
+    <script src="main.js"></script>
 </body>
 
 </html>
