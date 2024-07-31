@@ -36,7 +36,8 @@ section {
 
 .benefits {
     background-color: #B0B0B0;
-    padding: 50px 15%;
+    padding: 10px 15%;
+    padding-bottom: 50px;
     text-align: center;
 }
 
@@ -216,13 +217,24 @@ section {
     text-align: center;
 }
 
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+
 .social-proof h2 {
     margin: 0 0 40px 0;
     font-size: 2.5em;
     color: #003366;
 }
 
-.social-proof-boxes {
+.slide {
     display: flex;
     justify-content: space-between;
     /* Distribui o espaço entre as caixas */
@@ -276,6 +288,30 @@ section {
     margin: 0;
     font-size: 1.2em;
     /* Aumenta o tamanho da fonte para melhorar a legibilidade */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #002244;
 }
 
 

@@ -48,4 +48,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    document.getElementById('scroll-button').addEventListener('click', function () {
+        const container = document.getElementById('testimonial-container');
+        const scrollAmount = 300; // Distância para rolar, ajuste conforme necessário
+        container.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+    
 });
