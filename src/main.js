@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Armazenamento no localStorage
         localStorage.setItem('contactFormData', JSON.stringify(formData));
-                // Exibição dos dados armazenados no console
-                const storedData = localStorage.getItem('contactFormData');
-                console.log('Dados armazenados:', JSON.parse(storedData));
+
+        // Exibição dos dados armazenados no console
+        const storedData = localStorage.getItem('contactFormData');
+        console.log('Dados armazenados:', JSON.parse(storedData));
 
         // Limpeza do formulário
         const form = document.getElementById('contact-form');
@@ -38,24 +39,68 @@ document.addEventListener('DOMContentLoaded', function() {
 
         modal.style.display = 'block';
 
-        span.onclick = function() {
+        span.onclick = function () {
             modal.style.display = 'none';
         }
 
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = 'none';
             }
         }
     });
 
-    document.getElementById('scroll-button').addEventListener('click', function () {
-        const container = document.getElementById('testimonial-container');
-        const scrollAmount = 300; // Distância para rolar, ajuste conforme necessário
-        container.scrollBy({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
+    // Função para navegação dos cards de provas sociais
+    const prevBtn = document.querySelector('.pre-btn');
+    const nextBtn = document.querySelector('.nxt-btn');
+    const container = document.querySelector('.social-proof-container');
+    let scrollAmount = 0;
+
+    function updateButtonState() {
+        const containerWidth = container.offsetWidth;
+        const maxScroll = container.scrollWidth - containerWidth;
+
+        if (scrollAmount <= 0) {
+            prevBtn.classList.add('btn-disabled');
+        } else {
+            prevBtn.classList.remove('btn-disabled');
+        }
+
+        if (scrollAmount >= maxScroll) {
+            nextBtn.classList.add('btn-disabled');
+        } else {
+            nextBtn.classList.remove('btn-disabled');
+        }
+    }
+
+    nextBtn.addEventListener('click', () => {
+        const containerWidth = container.offsetWidth;
+        const cardWidth = container.firstElementChild.offsetWidth;
+        const maxScroll = container.scrollWidth - containerWidth;
+
+        if (scrollAmount < maxScroll) {
+            scrollAmount += cardWidth * 3; // Desloca três cards por vez
+            container.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+            updateButtonState();
+        }
     });
-    
+
+    prevBtn.addEventListener('click', () => {
+        const cardWidth = container.firstElementChild.offsetWidth;
+
+        if (scrollAmount > 0) {
+            scrollAmount -= cardWidth * 3; // Desloca três cards por vez
+            container.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+            updateButtonState();
+        }
+    });
+
+    // Verifica o estado inicial dos botões
+    updateButtonState();
 });

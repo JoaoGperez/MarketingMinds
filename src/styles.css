@@ -206,6 +206,7 @@ section {
     overflow: hidden;
     position: relative;
     text-align: center;
+    
 }
 
 .social-proof h2 {
@@ -221,6 +222,8 @@ section {
     overflow-x: auto;
     scroll-behavior: smooth;
     margin: 0 auto;
+    border-radius: 10%;
+    scroll-snap-type: x mandatory;
 }
 
 .social-proof-container::-webkit-scrollbar {
@@ -228,6 +231,7 @@ section {
 }
 
 .relato-card {
+    flex: 0 0 auto;
     width: 30%;
     height: 350px;
     padding: 0;
@@ -242,6 +246,7 @@ section {
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    scroll-snap-align: start;
 }
 
 .social-proof-image {
@@ -249,12 +254,20 @@ section {
     height: auto;
     object-fit: cover;
     padding: 10px;
+    border-radius: 50%;
+}
+
+.customer-name {
+    font-size: 1.2em; /* Ajuste conforme necessário */
+    font-weight: bold;
+    color: #003366; /* Ajuste conforme necessário */
+    margin:5px 0; /* Espaçamento acima e abaixo do nome */
 }
 
 .social-proof-text {
     background-color: #003366;
     color: white;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     font-weight: bold;
     flex: 1;
@@ -267,6 +280,7 @@ section {
     margin: 0;
     font-size: 1.2em;
 }
+
 
 .pre-btn,
 .nxt-btn {
@@ -303,6 +317,10 @@ section {
 .nxt-btn:hover img {
     transform: scale(1.5);
 
+}
+
+.nxt-btn:hover img {
+    transform: scale(1.5) scaleX(-1);
 }
 
 
