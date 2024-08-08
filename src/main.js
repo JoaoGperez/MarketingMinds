@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const maxScroll = container.scrollWidth - containerWidth;
 
         if (scrollAmount < maxScroll) {
-            scrollAmount += cardWidth * 3; // Desloca três cards por vez
+            scrollAmount += cardWidth * 1; // Desloca três cards por vez
             container.scrollTo({
                 left: scrollAmount,
                 behavior: 'smooth'

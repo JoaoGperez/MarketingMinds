@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,16 +7,20 @@ body {
 
 .header {
     background: url('../imgs/Wallpapeer.jpg') no-repeat center center/cover;
+    
     color: white;
-    padding: 60px 20px 60px;
-    text-align: left;
+    padding: 75px 20px 120px;
+    text-align: center;
     position: relative;
 }
 
 .header-title h1 {
-    font-size: 3em;
+    font-size: 4em;
     width: 70%;
+    margin: 0 auto;
+    display: inline-block;
 }
+
 
 .header-subTitle {
     background-color: #003366;
@@ -25,7 +30,7 @@ body {
 
 .header-subTitle h2 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 2em;
     color: #fff;
 }
 
@@ -34,6 +39,7 @@ section {
     text-align: center;
 }
 
+/*Beneficios*/
 .benefits {
     background-color: #B0B0B0;
     padding: 10px 15%;
@@ -43,8 +49,9 @@ section {
 
 .benefits h2 {
     margin: 40px 0 40px 0;
-    font-size: 2.5em;
+    font-size: 3.0em;
     color: #003366;
+    padding: 10px 0px 40px;
 }
 
 .benefit-boxes {
@@ -109,6 +116,7 @@ section {
     font-size: 1.5em;
 }
 
+/*Formulario*/
 .contact-form {
     background-color: #003366;
     padding: 50px 20px;
@@ -118,7 +126,7 @@ section {
 .contact-form h2 {
     color: #fff;
     margin: 0 0 60px 0;
-    font-size: 2.5em;
+    font-size: 3.0em;
 }
 
 .contact-form form {
@@ -173,7 +181,6 @@ section {
     color: #fff;
     font-size: 1.2em;
     margin: 15% auto;
-    /*margem no topo*/
     padding: 20px;
     width: 40%;
     height: 20%;
@@ -186,7 +193,7 @@ section {
 }
 
 .close {
-    color: #aaa;
+    color: #fff;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -202,16 +209,16 @@ section {
 /*PROVAS SOCIAIS*/
 .social-proof {
     background-color: #e0e0e0;
-    padding: 20px;
+    padding: 40px;
     overflow: hidden;
     position: relative;
     text-align: center;
-    
+
 }
 
 .social-proof h2 {
     margin: 0 0 40px 0;
-    font-size: 2.5em;
+    font-size: 3.0em;
     color: #003366;
 }
 
@@ -258,10 +265,10 @@ section {
 }
 
 .customer-name {
-    font-size: 1.2em; /* Ajuste conforme necessário */
+    font-size: 1.2em;
     font-weight: bold;
-    color: #003366; /* Ajuste conforme necessário */
-    margin:5px 0; /* Espaçamento acima e abaixo do nome */
+    color: #003366;
+    margin: 5px 0;
 }
 
 .social-proof-text {
@@ -384,16 +391,34 @@ section {
 @media (max-width: 768px) {
 
     .header {
+        background: url('../imgs/Wallpapeer.jpg') no-repeat center center/cover;
+        color: white;
+        text-align: left;
+        position: relative;
         padding: 30px 20px 30px;
+
+    }
+
+    .header-title h1 {
+        font-size: 3em;
+        width: 85%;
+    }
+
+    .header-subTitle h2 {
+        margin: 0;
+        font-size: 1.5em;
+        color: #fff;
     }
 
     /* Benefícios */
     .benefits {
-        padding: 50px 20px;
+        padding: 30px 20px 40px;
     }
 
     .benefits h2 {
-        margin: 0 0 40px 0;
+        padding: 0px;
+        margin: 0px 0 30px 0;
+        font-size: 2.0em;
     }
 
     .benefit-boxes {
@@ -406,36 +431,51 @@ section {
         margin-bottom: 20px;
     }
 
+    .benefit-text p {
+        margin: 0;
+        font-size: 1.1em;
+    }
+
     .benefit-image {
         width: 50%;
     }
 
     /* Formulário de Contato */
+    .contact-form h2 {
+        margin: 0 0 20px 0;
+        font-size: 2.0em;
+    }
+
     .contact-form input[type="text"],
     .contact-form input[type="email"] {
         width: 70%;
         padding: 10px;
-        font-size: 1.5em;
+        font-size: 1.0em;
     }
 
     .contact-form button {
-        padding: 15px 40px;
+        padding: 12px 40px;
     }
+
 
     /* Provas Sociais */
     .social-proof {
         padding: 30px 10%;
     }
+    
 
-    .social-proof-boxes {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
+
+    .social-proof h2 {
+        margin: 0 0 40px 0;
+        font-size: 2.0em;
+        color: #003366;
     }
 
-    .social-proof-box {
-        width: 90%;
+    .relato-card {
+        flex: 0 0 100%;
         height: auto;
+        margin: 10px;
+        scroll-snap-align: center;
     }
 
     .social-proof-image {
@@ -443,15 +483,31 @@ section {
     }
 
     .social-proof-text p {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
+    /* Estilo do Rodapé */
+    .footer {
+
+        padding: 50px 20px;
+        text-align: center;
+        color: white;
+    }
+
+    .footer h2 {
+        margin: 0 0 40px 0;
+        font-size: 2.0em;
+        color: #003366;
+    }
+
+    /*Modal*/
     .modal-content {
-        height: 15%;
         width: 60%;
-        font-size: 1.5em;
-        padding: 1px;
-        justify-content: center;
+        height: 25%;
+        font-size: 1.3em;
+        padding: 15px;
+        text-align: center;
+      
     }
 
 }
