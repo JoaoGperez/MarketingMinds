@@ -39,76 +39,52 @@ section {
     text-align: center;
 }
 
-/*Beneficios*/
+/* Benefícios */
 .benefits {
     background-color: #B0B0B0;
-    padding: 10px 15%;
+    padding: 10px 5%;
     padding-bottom: 50px;
     text-align: center;
 }
 
 .benefits h2 {
-    margin: 40px 0 40px 0;
-    font-size: 3.0em;
+    margin: 40px 0;
+    font-size: 2.5em;
     color: #003366;
-    padding: 10px 0px 40px;
+    padding: 10px 0 40px;
 }
 
 .benefit-boxes {
     display: flex;
     justify-content: space-between;
-    gap: 0;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .benefit-box {
-    width: 25%;
+    width: 30%;
     padding: 0;
     border-radius: 15px;
     background-color: #e0e0e0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 0;
+    margin: 10px 0;
     overflow: hidden;
     box-sizing: border-box;
 }
 
 .benefit-image {
-    width: 100%;
-    height: auto;
-}
-
-.benefit-text {
-    background-color: #003366;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.benefit-text p {
-    margin: 0;
-    font-size: 1em;
-}
-
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.benefit-image {
-    width: 60%;
+    width: 40%;
     height: auto;
     padding: 20px;
 }
 
+
 .benefit-text {
-    width: 1;
     background-color: #003366;
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
+    font-weight: bold;
 }
 
 .benefit-text p {
@@ -207,29 +183,29 @@ section {
 }
 
 /*PROVAS SOCIAIS*/
+/* Provas Sociais */
 .social-proof {
     background-color: #e0e0e0;
     padding: 40px;
     overflow: hidden;
     position: relative;
     text-align: center;
-
 }
 
 .social-proof h2 {
     margin: 0 0 40px 0;
-    font-size: 3.0em;
+    font-size: 2.5em; /* Ajustado para melhor proporção em telas menores */
     color: #003366;
 }
 
 .social-proof-container {
-    width: 85%;
+    width: 90%; /* Ajustado para maior flexibilidade */
     padding: 10px;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     margin: 0 auto;
-    border-radius: 10%;
+    border-radius: 10px;
     scroll-snap-type: x mandatory;
 }
 
@@ -239,14 +215,15 @@ section {
 
 .relato-card {
     flex: 0 0 auto;
-    width: 30%;
-    height: 350px;
+    width: 100%; /* Ajustado para ocupar 100% em dispositivos menores */
+    max-width: 350px; /* Limita a largura máxima dos cards */
+    height: auto; /* Ajusta a altura para manter proporções */
     padding: 0;
     border: 1px solid #ccc;
     border-radius: 15px;
     background-color: #e0e0e0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 10px; /* Reduzido para ajustar o layout em telas menores */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -265,7 +242,7 @@ section {
 }
 
 .customer-name {
-    font-size: 1.2em;
+    font-size: 1em; /* Ajustado para telas menores */
     font-weight: bold;
     color: #003366;
     margin: 5px 0;
@@ -285,10 +262,10 @@ section {
 
 .social-proof-text p {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1em; /* Ajustado para ser legível em dispositivos menores */
 }
 
-
+/* Botões de navegação */
 .pre-btn,
 .nxt-btn {
     background-color: transparent;
@@ -296,17 +273,17 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
+    width: 50px; /* Ajustado para ser menor e não sobrecarregar o layout */
+    height: 50px;
     cursor: pointer;
 }
 
 .pre-btn {
-    left: 35px;
+    left: 20px;
 }
 
 .nxt-btn {
-    right: 35px;
+    right: 20px;
 }
 
 .pre-btn img,
@@ -322,12 +299,11 @@ section {
 
 .pre-btn:hover img,
 .nxt-btn:hover img {
-    transform: scale(1.5);
-
+    transform: scale(1.2); /* Ajustado para um hover mais sutil */
 }
 
 .nxt-btn:hover img {
-    transform: scale(1.5) scaleX(-1);
+    transform: scale(1.2) scaleX(-1);
 }
 
 
@@ -411,34 +387,25 @@ section {
     }
 
     /* Benefícios */
-    .benefits {
-        padding: 30px 20px 40px;
-    }
-
-    .benefits h2 {
+    .benefits h2{
         padding: 0px;
-        margin: 0px 0 30px 0;
-        font-size: 2.0em;
+    }
+    .benefit-box {
+        width: 60%;
     }
 
     .benefit-boxes {
-        flex-direction: row;
-        align-items: center;
+        justify-content: center;
     }
 
-    .benefit-box {
-        width: 32%;
-        margin-bottom: 20px;
+    .benefits h2 {
+        font-size: 2em;
     }
 
     .benefit-text p {
-        margin: 0;
-        font-size: 1.1em;
+        font-size: 1.2em;
     }
-
-    .benefit-image {
-        width: 50%;
-    }
+}
 
     /* Formulário de Contato */
     .contact-form h2 {
@@ -460,10 +427,8 @@ section {
 
     /* Provas Sociais */
     .social-proof {
-        padding: 30px 10%;
+        padding: 30px 12%;
     }
-    
-
 
     .social-proof h2 {
         margin: 0 0 40px 0;
@@ -510,4 +475,3 @@ section {
       
     }
 
-}
